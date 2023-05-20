@@ -5,6 +5,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 @Entity
 @Table(name = "users")
@@ -17,13 +18,14 @@ public class User {
     private String username;
     @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "Password must have one upper case, one lower case and should be between 6-10 characters.")
     private String password;
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
     @NotNull(message = "Activity cannot be left empty.")
     private String activity;
     @NotEmpty(message = "First name cannot be empty.")
     private String firstName;
     private String lastName;
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
     public int getId() {
         return id;
@@ -45,11 +47,11 @@ public class User {
         this.password = password;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -77,11 +79,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }

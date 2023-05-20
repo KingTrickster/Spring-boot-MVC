@@ -1,5 +1,6 @@
 package com.trxjster.springbootexample.controller;
 
+import com.trxjster.springbootexample.beans.Login;
 import com.trxjster.springbootexample.beans.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,13 +36,18 @@ public class HomeController {
         return "register";
     }
 
-    @ModelAttribute("newuser")
-    public User getDefaultUser(){
-        return new User();
-    }
-
-    @ModelAttribute("genderItems")
-    public List<String> getGenderList(){
-        return Arrays.asList(new String[]{"Male", "Female", "Other"});
-    }
+//    @ModelAttribute("newuser")
+//    public User getDefaultUser(){
+//        return new User();
+//    }
+//
+//    @ModelAttribute("genderItems")
+//    public List<String> getGenderList(){
+//        return Arrays.asList(new String[]{"Male", "Female", "Other"});
+//    }
+//
+//    @ModelAttribute("login")
+//    public Login getDefaultLogin(){
+//        return new Login();
+//    }
 }
