@@ -18,7 +18,7 @@
 				<ul class="navbar">
 					<li><a href="/home">home</a></li>
 					<li><a href="/goToSearch">search</a></li>
-					<li><a href="#">linkedIn</a></li>
+					<li><a href="/redirectToLinkedin">linkedIn</a></li>
 				</ul>
 				<!-- navbar -->
 			</div>
@@ -51,7 +51,7 @@
 			<nav class="nav" role="navigation">
 				<div class="container nav-elements">
 					<div class="branding">
-						<a href="#home"><img src="images/hpluslogo.svg"
+						<a href="/home"><img src="images/hpluslogo.svg"
 							alt="Logo - H Plus Sports"></a>
 						<p class="address">
 							100 Main Street<br> Seattle, WA 98144
